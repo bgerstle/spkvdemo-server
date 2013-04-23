@@ -36,16 +36,16 @@ class PubSubClient1(WampClientProtocol):
 
    def addPuppy(self):
       self.publish("pups:/", {
-         str(9): {
-            "name": "Duke", 
-            "about": "Pit mix with an attitude", 
-            "favorite": False
+         str(17): {
+            # "name": "Rover2", 
+            # "about": "Victorian bulldog", 
+            # "favorite": False
          }
-         # , str(10): {
-         #    "name": "Sasha", 
-         #    "about": "German shepherd from UWS", 
-         #    "favorite": False  
-         # }
+         , str(18): {
+            # "name": "aWoof", 
+            # "about": "The prodigal pup", 
+            # "favorite": False  
+         }
       })
 
 
