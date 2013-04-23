@@ -34,18 +34,20 @@ class PubSubClient1(WampClientProtocol):
       self.prefix("pups", "http://spkvexample.com/pups")
       self.addPuppy()
 
+   ## Make changes to the list of dogs here, then run the script to publish them to the server
+   ## NOTE: currently the client is hard-coded to talk to localhost
    def addPuppy(self):
       self.publish("pups:/", {
-         str(17): {
-            # "name": "Rover2", 
-            # "about": "Victorian bulldog", 
-            # "favorite": False
+         str(15): {
+            "name": "Dozer", 
+            "about": "Victorian bulldog", 
+            "favorite": False
          }
-         , str(18): {
-            # "name": "aWoof", 
-            # "about": "The prodigal pup", 
-            # "favorite": False  
-         }
+         # , str(13): {
+         #    "name": "Mozart", 
+         #    "about": "The prodigal pup", 
+         #    "favorite": False  
+         # }
       })
 
 
